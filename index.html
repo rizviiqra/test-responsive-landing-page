@@ -3,55 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Chronos - Reshape Your Reality</title>
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The Chronos - Experience the Future</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Optional: Customizing Tailwind's default theme if needed, or adding specific non-Tailwind styles.
-           For this simple page, Tailwind's defaults are sufficient and clean. */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
         body {
-            font-family: 'Inter', sans-serif; /* Using a common sans-serif or a Tailwind default */
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background */
+            color: #e2e8f0; /* Light text */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom right, #1a202c, #0a0e14);
+        }
+
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+
+        .footer-bg {
+            background-color: #1a202c;
+        }
+
+        /* Basic responsive adjustments if needed beyond Tailwind's utility classes */
+        @media (max-width: 768px) {
+            .hero-content {
+                text-align: center;
+            }
+            .hero-image {
+                margin-top: 2rem;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center p-4">
+<body class="antialiased">
+    <!-- Header/Hero Section -->
+    <header class="hero-gradient min-h-screen flex items-center justify-center text-center p-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between max-w-6xl">
+            <div class="hero-content md:w-1/2 md:pr-8 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-6 leading-tight">
+                    The Future. On Your Wrist.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-md mx-auto md:mx-0">
+                    Experience Chronos – the revolutionary wearable that blends cutting-edge technology with elegant design, reimagining how you connect with the world.
+                </p>
+                <a href="#demo" class="cta-button inline-block bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transform hover:scale-105">
+                    Watch the Demo
+                </a>
+            </div>
+            <div class="hero-image md:w-1/2 flex justify-center items-center">
+                <!-- Base64 SVG Placeholder Image for Chronos Device -->
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjUwIiB5PSI1MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIHJ4PSI0MCIgZmlsbD0iIzIzMjYyQiIgc3Ryb2tlPSIjMjkzMDM0IiBzdHJva2Utd2lkdGg9IjgiLz4KPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjAwIiByPSIxMjAiIGZpbGw9IiMzQjgyRjYiLz4KPHBhdGggZD0iTTIwMCAxMDBMMjAwIDMwME0xMDAgMjAwTDMwMCAyMDAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSIyMDAiIGN5PSIyMDAiIHJPSCIzMCIgZmlsbD0id2hpdGUiLz4KPHRleHQgeD0iMjAwIiB5PSIzNzAiIGZvbnQtZmFtaWx5PSJPcmJpdHJvbiwgU2Fucy1zZXJpZiIgZm9udC1zaXplPSI0MCIgZmlsbD0iIzlDQTMzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q0hST05PUzwvdGV4dD4KPC9zdmc+"
+                     alt="Chronos Device" class="max-w-full h-auto" style="max-height: 400px;">
+            </div>
+        </div>
+    </header>
 
-    <main class="max-w-4xl mx-auto text-center bg-gray-800 rounded-xl shadow-2xl p-8 md:p-16 border border-gray-700">
-        
-        <!-- Product Image Placeholder (Base64 SVG) -->
-        <img 
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iY2hyb25vc0dyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzYzNjZGMTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojQTc4QkZBO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTSA1MCw1IEEgNDUsNDUgMCAxIDEgNTAsOTUgQSA0NSw0NSAwIDEgMSAxNTAsNSBNIDUwLDE1IEEgMzUsMzUgMCAxIDAgNTAsODUgQSAzNSwzNSAwIDEgMCA1MCwxNSBaIiBmaWxsPSJ1cmwoI2Nocm9ub3NHcmFkaWVudCkiLz4KICA8cGF0aCBkPSJNIDUwLDIwIEwgNTAsNTAgTCA3MCw1MCBaIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNSIgZmlsbD0id2hpdGUiLz4KPC9zdmc+" 
-            alt="The Chronos device - a stylized, futuristic clock icon with a purple gradient" 
-            class="w-32 h-32 md:w-48 md:h-48 mx-auto mb-8 object-contain drop-shadow-lg"
-        >
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-900 text-center">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-12">Unleash Your Potential</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="feature-card bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                    <div class="text-indigo-400 mb-4 text-5xl">⚡</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-100">Blazing Performance</h3>
+                    <p class="text-gray-400">Experience unparalleled speed and responsiveness with Chronos's quantum-core processor.</p>
+                </div>
+                <div class="feature-card bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                    <div class="text-green-400 mb-4 text-5xl">❤️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-100">Advanced Health Monitoring</h3>
+                    <p class="text-gray-400">Track vital signs, sleep patterns, and stress levels with precision.</p>
+                </div>
+                <div class="feature-card bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                    <div class="text-yellow-400 mb-4 text-5xl">🌐</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-100">Seamless Connectivity</h3>
+                    <p class="text-gray-400">Stay connected with 5G, Wi-Fi 6, and a host of smart home integrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Title -->
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
-            Introducing <span class="text-indigo-400">The Chronos</span>
-        </h1>
+    <!-- Call to Action Section (Demo Link) -->
+    <section id="demo" class="py-20 bg-gray-800 text-center">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-6">Ready to see Chronos in action?</h2>
+            <p class="text-lg text-gray-400 mb-8">
+                Join us for an exclusive live demonstration and discover how Chronos will revolutionize your daily life.
+            </p>
+            <a href="#" class="inline-block bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                Register for the Demo
+            </a>
+        </div>
+    </section>
 
-        <!-- Brief Description -->
-        <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Reshape your reality. Experience the future, now. 
-            Unlock unparalleled temporal control and redefine what's possible with a device beyond time.
-        </p>
+    <!-- Footer -->
+    <footer class="footer-bg py-6 text-center text-gray-400 text-sm">
+        <div class="container mx-auto px-6">
+            Copyright 2025 Chronos Technologies
+        </div>
+    </footer>
 
-        <!-- Call-to-Action Button -->
-        <button id="ctaButton" 
-                class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold 
-                       py-4 px-10 rounded-full text-lg md:text-xl shadow-lg 
-                       transition duration-300 ease-in-out transform 
-                       hover:scale-105 focus:outline-none focus:ring-4 
-                       focus:ring-indigo-500 focus:ring-opacity-70 active:bg-indigo-800">
-            Pre-order Yours Today!
-        </button>
-    </main>
-
-    <!-- Embedded JavaScript for the Call-to-Action -->
-    <script>
-        document.getElementById('ctaButton').addEventListener('click', function() {
-            alert('Thank you for your interest in The Chronos! Pre-orders will open soon. Stay tuned!');
-        });
-    </script>
+    <!-- No JavaScript required for this version -->
 </body>
 </html>
